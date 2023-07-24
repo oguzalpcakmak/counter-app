@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { Platform, StyleSheet, View } from "react-native";
 import Header from "./components/Header";
-import { Counter } from "./features/counter/Counter";
+import Counter from "./features/counter/Counter";
 import LinkList from "./components/LearnReduxLinks";
 
 export default function CounterApp() {
