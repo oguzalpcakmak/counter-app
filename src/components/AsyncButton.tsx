@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { ReactNode, useRef } from "react";
 import {
   Animated,
   GestureResponderEvent,
@@ -9,12 +9,16 @@ import {
   ViewStyle,
 } from "react-native";
 
-export function AsyncButton({
+interface AsyncButtonProps extends PressableProps {
+  children?: ReactNode;
+}
+
+export default function AsyncButton({
   onPress,
   style,
   children,
   ...restProps
-}: PressableProps) {
+}: AsyncButtonProps) {
   const progress = useRef(new Animated.Value(0)).current;
   const opacity = useRef(new Animated.Value(1)).current;
 

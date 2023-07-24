@@ -12,7 +12,7 @@
 import { Animated, StyleSheet, View, Platform } from "react-native";
 import { useViewportUnits, useBounceAnimation } from "../app/hooks";
 
-const Header = () => {
+export default function Header() {
   const { vh } = useViewportUnits();
   const bounce = useBounceAnimation();
   const height = 40 * vh;
@@ -30,7 +30,7 @@ const Header = () => {
       />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -39,4 +39,3 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
 });
-export default Header;

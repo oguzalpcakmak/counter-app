@@ -56,27 +56,29 @@ const links = [
   },
 ];
 
-const LinkList = () => (
-  <ScrollView>
-    <View style={styles.container}>
-      {links.map((item, index) => {
-        return (
-          <Fragment key={index}>
-            <View style={styles.separator} />
-            <TouchableOpacity
-              accessibilityRole={"button"}
-              onPress={() => Linking.openURL(item.link)}
-              style={styles.linkContainer}
-            >
-              <Text style={styles.link}>{item.title}</Text>
-              <Text style={styles.description}>{item.description}</Text>
-            </TouchableOpacity>
-          </Fragment>
-        );
-      })}
-    </View>
-  </ScrollView>
-);
+export default function LinkList() {
+  return (
+    <ScrollView>
+      <View style={styles.container}>
+        {links.map((item, index) => {
+          return (
+            <Fragment key={index}>
+              <View style={styles.separator} />
+              <TouchableOpacity
+                accessibilityRole={"button"}
+                onPress={() => Linking.openURL(item.link)}
+                style={styles.linkContainer}
+              >
+                <Text style={styles.link}>{item.title}</Text>
+                <Text style={styles.description}>{item.description}</Text>
+              </TouchableOpacity>
+            </Fragment>
+          );
+        })}
+      </View>
+    </ScrollView>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -108,5 +110,3 @@ const styles = StyleSheet.create({
     height: 1,
   },
 });
-
-export default LinkList;

@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { AsyncButton } from "../../components/AsyncButton";
+import AsyncButton from "../../components/AsyncButton";
 import {
   decrement,
   increment,
@@ -16,7 +16,7 @@ import {
   selectCount,
 } from "./counterSlice";
 
-export function Counter() {
+export default function Counter() {
   const [incrementAmount, setIncrementAmount] = useState("2");
 
   // The `state` arg is correctly typed as `RootState` already
