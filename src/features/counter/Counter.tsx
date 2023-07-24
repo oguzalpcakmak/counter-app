@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -42,13 +42,13 @@ export function Counter() {
         </TouchableOpacity>
       </View>
       <View style={styles.row}>
-          <TextInput
-            style={styles.textbox}
-            value={incrementAmount}
-            keyboardType="numeric"
-            onChangeText={setIncrementAmount}
-            returnKeyType="done"
-          />
+        <TextInput
+          style={styles.textbox}
+          value={incrementAmount}
+          keyboardType="numeric"
+          onChangeText={setIncrementAmount}
+          returnKeyType="done"
+        />
         <View>
           <TouchableOpacity
             style={styles.button}

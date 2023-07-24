@@ -10,7 +10,8 @@
 
 "use strict";
 
-import React from "react";
+import { Fragment } from "react";
+
 import {
   View,
   Text,
@@ -60,7 +61,7 @@ const LinkList = () => (
     <View style={styles.container}>
       {links.map((item, index) => {
         return (
-          <React.Fragment key={index}>
+          <Fragment key={index}>
             <View style={styles.separator} />
             <TouchableOpacity
               accessibilityRole={"button"}
@@ -70,7 +71,7 @@ const LinkList = () => (
               <Text style={styles.link}>{item.title}</Text>
               <Text style={styles.description}>{item.description}</Text>
             </TouchableOpacity>
-          </React.Fragment>
+          </Fragment>
         );
       })}
     </View>

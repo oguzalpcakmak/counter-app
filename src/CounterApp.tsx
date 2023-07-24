@@ -1,4 +1,3 @@
-import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { Platform, StyleSheet, View } from "react-native";
 import Header from "./components/Header";
@@ -18,7 +17,7 @@ export default function CounterApp() {
 
 const styles = StyleSheet.create({
   container: {
-    ...(Platform.OS === "web" ? {alignItems: "center"} : {}),
+    ...(Platform.OS === "web" ? { alignItems: "center" } : {}),
     flex: 1,
     backgroundColor: "#fff",
     justifyContent: "center",

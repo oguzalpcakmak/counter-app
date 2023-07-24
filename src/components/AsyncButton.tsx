@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import { useRef } from "react";
 import {
   Animated,
   GestureResponderEvent,
@@ -7,7 +7,7 @@ import {
   StyleSheet,
   View,
   ViewStyle,
-} from 'react-native';
+} from "react-native";
 
 export function AsyncButton({
   onPress,
@@ -29,7 +29,7 @@ export function AsyncButton({
       toValue: 1,
       duration: 1000,
       useNativeDriver: false,
-    }).start(({finished}) => {
+    }).start(({ finished }) => {
       if (!finished) {
         return;
       }
@@ -44,8 +44,8 @@ export function AsyncButton({
 
   const progressInterpolate = progress.interpolate({
     inputRange: [0, 1],
-    outputRange: ['0%', '100%'],
-    extrapolate: 'clamp',
+    outputRange: ["0%", "100%"],
+    extrapolate: "clamp",
   });
 
   const progressStyle: Animated.WithAnimatedObject<ViewStyle> = {
@@ -65,10 +65,10 @@ export function AsyncButton({
 
 const styles = StyleSheet.create({
   progress: {
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     bottom: 0,
     left: 0,
-    backgroundColor: 'rgba(112,76,182, 0.15)',
+    backgroundColor: "rgba(112,76,182, 0.15)",
   },
 });

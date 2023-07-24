@@ -9,7 +9,6 @@
 
 "use strict";
 
-import React from "react";
 import { Animated, StyleSheet, View, Platform } from "react-native";
 import { useViewportUnits, useBounceAnimation } from "../app/hooks";
 
