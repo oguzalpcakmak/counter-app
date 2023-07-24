@@ -79,7 +79,6 @@ const LinkList = () => (
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 32,
     marginBottom: 32,
     paddingHorizontal: 24,
   },

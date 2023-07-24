@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flexWrap: "wrap",
+    marginBottom: 32,
   },
   value: {
     fontSize: 78,
